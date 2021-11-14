@@ -26,6 +26,26 @@ source(file="payoffFunction-2.R")
 
  At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
  
+```{r}
+money=vector("numeric",0)
+for(i in c(1:1000)){
+money[i]=(profit(35,2, 637))
+}
+```
+ 
+```{r}
+hist(money)
+```
+ 
+ Bronlow profits are from 200 to 375.
+ 
+```{r}
+moneysorted=sort(money)
+lci=moneysorted[26]
+uci=moneysorted[974]
+```
+ 
+ 
 Report git commit structure:
 There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
 1. What are the fair odds for a bet on matching birthdays in a 35 person class.
@@ -38,7 +58,30 @@ The function will be given a class_size by number of students, odds, and Number_
 
 # In the class and payoff as described  If you highered 40 brownlow substitute teachers to do the same thing that Brownlow did then.
 ## what is their average earnings
+
+ 
+```{r}
+money=vector("numeric",0)
+for(i in c(1:40)){
+money[i]=(profit(35,2, 637))
+}
+```
+ 
+ 
+```{r}
+t.test(money)
+print(sd(money))
+```
+## the standard deviation 
+ 
+```{r}
+hist(money)
+```
+ 
 ## the standard deviation and a 95% confidence interval for their earnings?
+ 
+ The 95% confidence interval for earnings is `r lci` to `r uci`
+  
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
