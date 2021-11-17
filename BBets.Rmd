@@ -117,13 +117,9 @@ money[i]=(profit(29,2, 637))
 hist(money)
 ```
 
-Started at 35 tried 20 27 31 30 29
-It is between 28 and 29 students that
+The class size needs too be between  28 and 29 students with the bet being 2:1 into tune Dr. J earnings to be zero. I started at the class size of 35 which was tooo high . The next try was a class of 20 which was too low. Maneuvering between 35 and 20 with with 20,27,31,31 and finally deciding that 28 or 29 students was the number of students.  
+
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
-
-
-
-
 
 
 
@@ -132,3 +128,5 @@ It is between 28 and 29 students that
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+
+At the beggining Dr. J was making about $280 with class sizes of 35 with 2:1 odds when guessing that there would be at least two students in the same class with the same birthday. When changing the odds to 4.5:1 It would leave Dr. J close to zero profit. When changing the class size together 29 or 28 students at 2:1 odds the same was true. Dr. J's profit were close to zero.
