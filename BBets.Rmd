@@ -26,6 +26,7 @@ source(file="payoffFunction-2.R")
 
  At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
  
+ 
 ```{r}
 money=vector("numeric",0)
 for(i in c(1:1000)){
@@ -86,7 +87,18 @@ hist(money)
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
 
+
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
+
+```{r}
+money=vector("numeric",0)
+for(i in c(1:200)){
+money[i]=(profit(35,4.5, 637))
+}
+hist(money)
+```
+
+I chose a random values for the odds variable, until I got the histogram to center at zero.I started off with 1 and it was considerable low , so I chose 5 which was closer to what I wanted but still it was too high. I went to 4 which it showed me that 4.5 was the best pick. A manipulation of the odds variable to a class size of 35 with 4.5:1 odds show to give Dr. J earnings of zero.
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
@@ -96,6 +108,17 @@ hist(money)
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
+
+```{r}
+money=vector("numeric",0)
+for(i in c(1:200)){
+money[i]=(profit(29,2, 637))
+}
+hist(money)
+```
+
+Started at 35 tried 20 27 31 30 29
+It is between 28 and 29 students that
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 
